@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <section className={"flex justify-center"}>{children}</section>
         </ThemeProvider>
       </body>
     </html>

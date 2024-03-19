@@ -1,10 +1,17 @@
-import { ThemeModeToggle } from "@/components/ThemeModeToggle";
+import HomeNavBar from "@/components/pages/Home/HomeNavBar";
+import HomeCards from "@/components/pages/Home/HomeCards";
+import Hero from "@/components/pages/Home/Hero";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Hello world</h1>
-      <ThemeModeToggle />
-    </main>
+    <section className={"max-w-[1400px] "}>
+      <HomeNavBar />
+      <main>
+        <Hero />
+        <HomeCards />
+        <h1>Hello world</h1>
+      </main>
+      <div className={"h-screen"}></div>
+    </section>
   );
 }

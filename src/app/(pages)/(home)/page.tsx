@@ -5,8 +5,7 @@ import HomeTimeLine from "@/components/pages/Home/HomeTimeLine";
 
 export default function Home() {
   return (
-    <section className={"max-w-[1400px] "}>
-      <HomeNavBar />
+    <>
       <main>
         <Hero />
         <HomeCards />
@@ -14,6 +13,6 @@ export default function Home() {
         <h1>Hello world</h1>
       </main>
       <div className={"h-screen"}></div>
-    </section>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import HomeNavBar from "@/components/pages/Home/HomeNavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <section className={"flex justify-center"}>{children}</section>
+          <section className={"flex justify-center"}>
+            <section className={"w-full max-w-[1400px] "}>
+              <HomeNavBar />
+              {children}
+            </section>
+          </section>
         </ThemeProvider>
       </body>
     </html>

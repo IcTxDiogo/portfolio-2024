@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { ThemeModeToggle } from "@/components/ThemeModeToggle";
+import HomeVerifyPage from "@/components/pages/Home/HomeVerifyPage";
 
 type HomeItem = {
   id: UUID;
@@ -27,6 +28,7 @@ export default function HomeNavBar() {
               <Link href={item.link}>
                 <Button variant={"link"}>{item.name}</Button>
               </Link>
+              <HomeVerifyPage itemLink={item.link} />
             </li>
           ))}
         </ul>

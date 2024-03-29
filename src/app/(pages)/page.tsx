@@ -2,6 +2,7 @@ import HomeNavBar from "@/components/pages/Home/HomeNavBar";
 import HomeCards from "@/components/pages/Home/HomeCards";
 import Hero from "@/components/pages/Home/Hero";
 import HomeTimeLine from "@/components/pages/Home/HomeTimeLine";
+import HomeFooter from "@/components/pages/Home/HomeFooter";
 
 export default function Home() {
   return (
@@ -11,9 +12,8 @@ export default function Home() {
         <Hero />
         <HomeCards />
         <HomeTimeLine />
-        <h1>Hello world</h1>
       </main>
-      <div className={"h-screen"}></div>
+      <HomeFooter />
     </section>
   );
 }

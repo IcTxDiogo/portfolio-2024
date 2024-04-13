@@ -11,12 +11,12 @@ describe("HomeNavBar", () => {
     expect(logo).toBeDefined();
   });
 
-  it("should render 3 links", () => {
+  it("should render 2 links", () => {
     render(<HomeNavBar />);
 
     const links = screen.getAllByRole("link");
 
-    expect(links).toHaveLength(3);
+    expect(links).toHaveLength(2);
   });
 
   it("should render the theme mode toggle", () => {

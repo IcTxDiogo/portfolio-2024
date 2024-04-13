@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import useMapControl from "@/Hooks/mapControl/useMapControl";
 import MenuNavigation from "@/components/pages/Project/pokebro-map/MenuNavigation";
+import SuspendButtons from "@/components/pages/Project/pokebro-map/SuspendButtons";
 
 export const IMAGE_SIZE = 2048;
 
@@ -59,6 +60,7 @@ export default function MapControl() {
         >
           <div style={mapStyles} ref={divRef}></div>
           <MenuNavigation floor={floor} setFloor={setFloor} doZoom={doZoom} />
+          <SuspendButtons />
         </main>
       )}
     </>

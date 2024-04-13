@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ArrowDown, ArrowUp, Keyboard, Minus, Plus } from "lucide-react";
+import { ArrowDown, ArrowUp, Minus, Plus } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuItem,

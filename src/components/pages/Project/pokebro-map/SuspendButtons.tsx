@@ -21,7 +21,7 @@ export default function SuspendButtons() {
   return (
     <>
       <Link href={"/"} className={"absolute left-4 top-4 z-50"}>
-        <Button size={"icon"}>
+        <Button size={"icon"} variant={"outline"}>
           <ChevronLeftIcon />
         </Button>
       </Link>
@@ -29,6 +29,7 @@ export default function SuspendButtons() {
         <ThemeModeToggle />
       </div>
       <Button
+        variant={"outline"}
         className={"absolute bottom-4 right-4 z-50"}
         size={"icon"}
         onClick={() => toggleFullScreen()}

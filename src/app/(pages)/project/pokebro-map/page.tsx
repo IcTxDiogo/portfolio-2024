@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <>
-      <div>aaa</div>
+      <div>pokebro map</div>
     </>
   );
 }

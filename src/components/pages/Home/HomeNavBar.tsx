@@ -12,9 +12,8 @@ type HomeItem = {
 };
 
 const homeItens: HomeItem[] = [
-  { id: randomUUID(), name: "About", link: "/" },
+  { id: randomUUID(), name: "Home", link: "/" },
   { id: randomUUID(), name: "Projects", link: "/projects" },
-  { id: randomUUID(), name: "Contact", link: "/contact" },
 ];
 
 export default function HomeNavBar() {

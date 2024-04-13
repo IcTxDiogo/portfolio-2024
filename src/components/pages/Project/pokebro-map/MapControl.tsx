@@ -6,6 +6,7 @@ import useMapControl from "@/Hooks/mapControl/useMapControl";
 import MenuNavigation from "@/components/pages/Project/pokebro-map/MenuNavigation";
 import SuspendButtons from "@/components/pages/Project/pokebro-map/SuspendButtons";
 import MapTools from "@/components/pages/Project/pokebro-map/MapTools";
+import ShowNameCities from "@/components/pages/Project/pokebro-map/ShowNameCities";
 
 export const IMAGE_SIZE = 2048;
 
@@ -59,7 +60,9 @@ export default function MapControl() {
           onWheel={(e) => onZoom(e.nativeEvent)}
           onTouchStart={(e) => onTouchStart(e.nativeEvent)}
         >
-          <div style={mapStyles} ref={divRef}></div>
+          <div style={mapStyles} ref={divRef}>
+            {floor === 7 && <ShowNameCities scale={scale} />}
+          </div>
           <MenuNavigation floor={floor} setFloor={setFloor} doZoom={doZoom} />
           <SuspendButtons />
           <MapTools />

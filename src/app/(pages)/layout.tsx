@@ -4,8 +4,6 @@ import { ReactNode } from "react";
 
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import HomeNavBar from "@/components/pages/Home/HomeNavBar";
-import HomeFooter from "@/components/pages/Home/HomeFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,7 +1,12 @@
+import MapControl from "@/components/pages/Project/pokebro-map/MapControl";
+import SuspendButtons from "@/components/pages/Project/pokebro-map/SuspendButtons";
+
 export default function Page() {
   return (
     <>
-      <div>pokebro map</div>
+      <div className={"h-screen w-screen bg-black"}>
+        <MapControl />
+      </div>
     </>
   );
 }

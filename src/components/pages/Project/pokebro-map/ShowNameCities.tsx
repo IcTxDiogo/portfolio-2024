@@ -34,52 +34,52 @@ const citiesNameMarker = [
   {
     name: "Cinnabar",
     posX: 360,
-    posY: 1420,
+    posY: 1430,
   },
   {
     name: "Saffron",
-    posX: 875,
-    posY: 820,
+    posX: 890,
+    posY: 825,
   },
   {
     name: "Fuchsia",
-    posX: 935,
+    posX: 945,
     posY: 1440,
   },
   {
     name: "Celadon",
-    posX: 645,
-    posY: 790,
+    posX: 655,
+    posY: 800,
   },
   {
     name: "Lavender",
     posX: 1090,
-    posY: 850,
+    posY: 860,
   },
   {
     name: "Vermilion",
     posX: 950,
-    posY: 1050,
+    posY: 1060,
   },
   {
     name: "Cerulean",
     posX: 870,
-    posY: 580,
+    posY: 590,
   },
   {
     name: "Pewter",
-    posX: 320,
-    posY: 675,
+    posX: 330,
+    posY: 685,
   },
   {
     name: "Viridian",
-    posX: 300,
-    posY: 1000,
+    posX: 315,
+    posY: 1010,
   },
   {
     name: "Pallet",
-    posX: 300,
-    posY: 1200,
+    posX: 315,
+    posY: 1210,
   },
 ];
 
@@ -89,9 +89,7 @@ export default function ShowNameCities({ scale }: ShowNameCityProps) {
       {citiesNameMarker.map((item, index) => (
         <div
           key={index}
-          className={`absolute z-50 ${getTextClass(
-            scale,
-          )} font-semibold text-white`}
+          className={`absolute z-50 font-semibold text-white`}
           style={{
             left: `${item.posX}px`,
             top: `${item.posY}px`,

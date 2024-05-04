@@ -6,14 +6,20 @@ export function getTotalBoost(
   end: BoostType,
   type: PokemonTypes,
 ) {
+  let initialInteration = true;
   let result = 0;
   for (let i = start; i <= end; i++) {
+    if (initialInteration) {
+      initialInteration = false;
+      continue;
+    }
     result += pokemonTypesWithBoost[type].boost[i];
   }
   return result;
 }
 
 const boostPadraoTrinta = {
+  0: 0,
   1: 1,
   2: 2,
   3: 3,
@@ -66,6 +72,7 @@ const boostPadraoTrinta = {
   50: 55,
 };
 const boostPadraoDezesete = {
+  0: 0,
   1: 1,
   2: 2,
   3: 3,
@@ -118,6 +125,7 @@ const boostPadraoDezesete = {
   50: 32,
 };
 const boostPadraoDezeseis = {
+  0: 0,
   1: 1,
   2: 2,
   3: 3,
@@ -202,6 +210,7 @@ export const pokemonTypesWithBoost = {
   poison: {
     label: "Pedra do Veneno - Venenoso",
     boost: {
+      0: 0,
       1: 1,
       2: 2,
       3: 3,
@@ -277,6 +286,7 @@ export const pokemonTypesWithBoost = {
   dragon: {
     label: "Pedra Cristalina - Dragão",
     boost: {
+      0: 0,
       1: 1,
       2: 2,
       3: 3,

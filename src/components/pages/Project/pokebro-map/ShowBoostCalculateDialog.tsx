@@ -37,13 +37,16 @@ type ShowFindDialogProps = {
   setBoostDialog: (open: boolean) => void;
 };
 
+const minimalBoost = 0;
+const maximalBoost = 50;
+
 export default function ShowBoostCalculateDialog({
   boostDialog,
   setBoostDialog,
 }: ShowFindDialogProps) {
   const [tipoPokemon, setTipoPokemon] = useState<PokemonTypes>("grass");
-  const [initialBoost, setInitialBoost] = useState<BoostType>(1);
-  const [finalBoost, setFinalBoost] = useState<BoostType>(50);
+  const [initialBoost, setInitialBoost] = useState<BoostType>(minimalBoost);
+  const [finalBoost, setFinalBoost] = useState<BoostType>(maximalBoost);
   const [result, setResult] = useState<ResultType>();
 
   useEffect(() => {
@@ -60,28 +63,28 @@ export default function ShowBoostCalculateDialog({
   useEffect(() => {
     if (!boostDialog) {
       setTipoPokemon("grass");
-      setInitialBoost(1);
-      setFinalBoost(50);
+      setInitialBoost(minimalBoost);
+      setFinalBoost(maximalBoost);
     }
   }, [boostDialog]);
 
   function verifyBoost(boost: string, setBoost: (boost: BoostType) => void) {
     const number = parseInt(boost);
-    if (number >= 1) {
+    if (number >= 0) {
       if (number <= 50) {
         setBoost(number as BoostType);
       } else {
-        setBoost(50);
+        setBoost(maximalBoost);
       }
     } else {
-      setBoost(1);
+      setBoost(minimalBoost);
     }
   }
 
   function handleResetar() {
     setTipoPokemon("grass");
-    setInitialBoost(1);
-    setFinalBoost(50);
+    setInitialBoost(minimalBoost);
+    setFinalBoost(maximalBoost);
     setResult(undefined);
   }
 
